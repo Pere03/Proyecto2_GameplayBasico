@@ -10,6 +10,7 @@ public class PlayerControler : MonoBehaviour
     public float xRange = 16;
     public float xRangeInv = -16;
 
+    public GameObject projectilPrefab;
 
     void Start()
     {
@@ -19,20 +20,42 @@ public class PlayerControler : MonoBehaviour
    
     void Update()
     {
+        //Moverse Horizontalmente
         HorizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Speed * Time.deltaTime * HorizontalInput);
 
+        //Pared Invisible
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y,
                 transform.position.z);
         }
 
-        if (transform.position.x < xRange)
+        
+        if (transform.position.x < xRangeInv)
         {
-            transform.position = new Vector3(xRange, transform.position.y,
+            transform.position = new Vector3(xRangeInv, transform.position.y,
                 transform.position.z);
         }
 
+        /*
+        if (transform.position.x < -xRange) 
+        { 
+            tranform.position = new Vector3(-xRange, transform.position.y,
+                transform.position.z);
+        }
+        */
+
+        //Disparo
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilPrefab, transform.position,
+                projectilPrefab.transform.rotation);
+        }
+
+
+   
+
     }
 }
+    
