@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a65255783bb76c4293d6ef832a3e4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 25
+  Speed: 20
   xRange: 16
   xRangeInv: -16
   projectilPrefab: {fileID: 6012230907147977586, guid: 8e3cc7dca6e7557408fc3e9389755fdc,
@@ -541,8 +541,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0629bed381941fe4e98f7a4ab0f43c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefab: {fileID: 3355245590829909826, guid: 184d6b3e25ef5d7468891647d40509b5,
-    type: 3}
+  animalPrefabs:
+  - {fileID: 3355245590829909826, guid: 184d6b3e25ef5d7468891647d40509b5, type: 3}
+  - {fileID: 7615120186823345014, guid: 4850167903c51f44eb0b7e0e0417d650, type: 3}
+  - {fileID: 7472959091751138161, guid: 0381bfef2838b944d9a69615d47e7294, type: 3}
+  - {fileID: 2573638590289192046, guid: 3a8af1312c781ac47a1728267b844913, type: 3}
+  - {fileID: 8602659113418323776, guid: 02817edc48373b94fa1993594ea51ab5, type: 3}
   spawnPosition: {x: 0, y: 0, z: 25}
 --- !u!4 &887983148
 Transform:
